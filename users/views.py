@@ -43,4 +43,5 @@ def get_user(request):
         return Response({
             'user_data': serialize_user(user)
         })
-    return Response({})
+
+    return Response({'error':'not authenticated'}, status=400)
